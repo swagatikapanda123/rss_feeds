@@ -11,9 +11,10 @@
     "axios": "^0.20.0",
     "core-js": "^3.6.5",
     "moment": "^2.29.0",
-    "vue": "^2.6.11",
+    "vue": "^2.6.12",
     "vue-router": "^3.4.5",
-    "vuetify": "^2.2.11"
+    "vuetify": "^2.2.11",
+    "yarn": "^1.22.10"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",

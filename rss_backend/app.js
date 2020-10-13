@@ -44,6 +44,11 @@ app.use(function (req,res,next) {
 
 app.use('/', routes);
 app.use('/auth', users);
+//login middleware
+app.use(function(req, res, next){
+    console.log('ip add:',req.ip);
+    next();
+});
 
 /// catch 404 and forwarding to error handler
 app.use(function(req, res, next) {

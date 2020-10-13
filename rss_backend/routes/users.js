@@ -17,8 +17,9 @@ router.post('/login', function (req, res) {
   if (username == 'Admin' && password == 'admin') {
     res.status(200).send('Login successful')
   }
-  res.status(404).send('Wrong credentials');
+    res.status(404).send('Wrong credentials');
 });
+
 
 function getDirectFeeds(feedurl) {
 
@@ -57,11 +58,11 @@ function getDirectFeeds(feedurl) {
   // });
 }
 
-router.get('/populate', (req, res, next) => {
+router.get('/populate',isAuthenticated, (req, res, next) => {
   res.status(200).send(utils.feedDetails);
 })
 
-router.get('/feeds', (req, res, next) => {
+router.get('/feeds',isAuthenticated, (req, res, next) => {
   if (!req.query.siteoption) {
     res.status(400).send('Bad request!')
   }
